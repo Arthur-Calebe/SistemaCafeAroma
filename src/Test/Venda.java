@@ -87,8 +87,20 @@ public class Venda {
                     }
                     break;
 
+                case 4:
+                    // colocando o total de produto vendido
+                    System.out.println("Total vendido: " + totalVendido);
+                    break;
 
+                case 5:
+                    // Fechando o sistema
+                    System.out.println("Fechando a cafeteria...");
+                    break;
+
+                default:
+                    System.out.println("Opção digitada não existe!!");
             }
         }
+        scanner.close();
     }
 }
