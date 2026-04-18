@@ -30,7 +30,25 @@ public class Venda {
             switch (opcao){
                 case 1:
                     // cadastrando disponibilidade dos produtos
+                    if (contadorProdutos < produtos.length) {
+                        System.out.print("Nome do produto: ");
+                        String tipoCafe = scanner.nextLine();
 
+                        System.out.print("Preço do produto: ");
+                        double precoCafe = scanner.nextDouble();
+
+                        System.out.print("Quantidade em estoque: ");
+                        int quantidadeEstoque = scanner.nextInt();
+                        scanner.nextLine();
+
+                        produtos[contadorProdutos] = new Cozinha(tipoCafe, precoCafe, quantidadeEstoque);
+                        contadorProdutos++;
+
+                        System.out.println("Produto cadastrado com sucesso!");
+                    } else {
+                        System.out.println("Limite de produtos atingido!");
+                    }
+                    break;
             }
         }
     }
