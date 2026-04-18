@@ -51,6 +51,7 @@ public class Venda {
                     break;
 
                 case 2:
+                    // mostrando os produtos no estoque
                     if (contadorProdutos == 0){
                         System.out.println("Nenhum produto cadastrado!");
                     }else {
@@ -59,6 +60,34 @@ public class Venda {
                         }
                     }
                     break;
+
+                case 3:
+                    // menu de vendas
+                    System.out.println("Digite o nome do produto desejado:");
+                    String produtoBusca = scanner.nextLine();
+                    boolean encontrado = false;
+
+                    for (int i = 0; i < contadorProdutos; i++) {
+                        if (produtos[i].getTipoCafe().equalsIgnoreCase(produtoBusca)) {
+                            System.out.println("Quantidade desejada: ");
+                            int quantidade = scanner.nextInt();
+
+                            if (produtos[i].vender(quantidade)){
+                                totalVendido += produtos[i].getPrecoCafe() * quantidade;
+                                System.out.println("Venda finalizada com sucesso!!");
+                            }
+
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (!encontrado){
+                        System.out.println("Produto não disponível!");
+                    }
+                    break;
+
+
             }
         }
     }
