@@ -49,6 +49,16 @@ public class Venda {
                         System.out.println("Limite de produtos atingido!");
                     }
                     break;
+
+                case 2:
+                    if (contadorProdutos == 0){
+                        System.out.println("Nenhum produto cadastrado!");
+                    }else {
+                        for (int i = 0; i < contadorProdutos; i++) {
+                            produtos[i].ImprimirCozinha();
+                        }
+                    }
+                    break;
             }
         }
     }

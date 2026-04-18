@@ -12,8 +12,8 @@ public class Cozinha {
     }
 
     public void ImprimirCozinha(){
-        System.out.println("Tipo de café: " + tipoCafe);
-        System.out.println("Preço do café: " + precoCafe);
+        System.out.println("Tipo de produto: " + tipoCafe);
+        System.out.println("Preço do produto: " + precoCafe);
         System.out.println("Disponível no estoque: " + quantidadeEstoque);
     }
 
