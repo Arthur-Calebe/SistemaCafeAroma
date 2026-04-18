@@ -15,6 +15,7 @@ public class Cozinha {
         System.out.println("Tipo de produto: " + tipoCafe);
         System.out.println("Preço do produto: " + precoCafe);
         System.out.println("Disponível no estoque: " + quantidadeEstoque);
+        System.out.println("-----------------------------");
     }
 
     public boolean vender(int quantidade) {
